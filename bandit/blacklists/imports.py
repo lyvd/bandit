@@ -317,4 +317,11 @@ def gen_blacklist():
         'maintained and have been deprecated. '
         'Consider using pyca/cryptography library.', 'HIGH'))
 
+    sets.append(utils.build_conf_dict(
+        'import_base64', 'B414', ['base64'],
+        'base64 encoding',
+        'HIGH'
+        ))
+
+
     return {'Import': sets, 'ImportFrom': sets, 'Call': sets}
