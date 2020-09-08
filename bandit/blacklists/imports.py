@@ -323,5 +323,11 @@ def gen_blacklist():
         'HIGH'
         ))
 
+    # example: examples/import_socket.py
+    sets.append(utils.build_conf_dict(
+        'import_socket', 'B415', ['socket'],
+        'used for sending data to remote server',
+        'HIGH'
+        ))
 
     return {'Import': sets, 'ImportFrom': sets, 'Call': sets}
