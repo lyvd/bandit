@@ -259,6 +259,8 @@ Usage::
       B703  django_mark_safe
       B414  import_base64
       B415  import_socket
+      B326  b64decode
+      B327  b64encode
 
 Baseline
 --------
