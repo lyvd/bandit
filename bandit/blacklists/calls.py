@@ -570,18 +570,24 @@ def gen_blacklist():
         ))
 
     sets.append(utils.build_conf_dict(
-        'b64decode', 'B326', ['base64.b64decode'],
+        'base64_b64decode', 'B326', ['base64.b64decode'],
         'b64decode can be used for decoding malicious payload'
         ))
 
     sets.append(utils.build_conf_dict(
-        'b64encode', 'B327', ['base64.b64encode'],
+        'base64_b64encode', 'B327', ['base64.b64encode'],
         'b64decode can be used for encoding malicious payload'
         ))
 
     #examples/socket_gethostname.py
     sets.append(utils.build_conf_dict(
-        'gethostname', 'B328', ['socket.gethostname'],
+        'socket_gethostname', 'B328', ['socket.gethostname'],
         'gethostname can be used to get the hostname of the machine'
+        ))
+
+    #examples/socket_gethostname.py
+    sets.append(utils.build_conf_dict(
+        'socket_connect', 'B329', ['socket.socket.connect'],
+        'Connect to a remote socket at address.'
         ))
     return {'Call': sets}
