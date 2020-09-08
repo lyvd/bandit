@@ -569,4 +569,13 @@ def gen_blacklist():
         'attacks. Consider using tmpfile() instead.'
         ))
 
+    sets.append(utils.build_conf_dict(
+        'b64decode', 'B326', ['base64.b64decode'],
+        'b64decode can be used for decoding malicious payload'
+        ))
+
+    sets.append(utils.build_conf_dict(
+        'b64encode', 'B327', ['base64.b64encode'],
+        'b64decode can be used for encoding malicious payload'
+        ))
     return {'Call': sets}

@@ -319,7 +319,7 @@ def gen_blacklist():
 
     sets.append(utils.build_conf_dict(
         'import_base64', 'B414', ['base64'],
-        'base64 encoding',
+        'encode data using Base64',
         'HIGH'
         ))
 
