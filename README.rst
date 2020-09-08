@@ -264,6 +264,7 @@ Usage::
       B328  gethostname
       B202  socket_connect
       B203  socket_send
+      B204  socket_recv
 
 Baseline
 --------
