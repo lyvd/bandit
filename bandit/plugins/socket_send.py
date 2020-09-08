@@ -6,7 +6,7 @@
 
 r"""
 ======================================================
-B202: Test for use of socket.socket.connect 
+B203: Test for use of socket.socket.send 
 ======================================================
 
 Running Flask applications in debug mode results in the Werkzeug debugger
@@ -43,14 +43,14 @@ import bandit
 from bandit.core import test_properties as test
 
 
-@test.test_id('B202')
+@test.test_id('B203')
 @test.checks('Call')
-def socket_connect(context):
+def socket_send(context):
     if context.is_module_imported_like('socket'):
-        if context.call_function_name_qual.endswith('.connect'):
+        if context.call_function_name_qual.endswith('.send'):
             return bandit.Issue(
                     severity=bandit.HIGH,
                     confidence=bandit.MEDIUM,
-                    text="Connect to a remote socket at address",
+                    text="Send data to the socket",
                     lineno=context.get_lineno_for_call_arg('debug'),
                 )
