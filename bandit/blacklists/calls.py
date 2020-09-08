@@ -579,8 +579,9 @@ def gen_blacklist():
         'b64decode can be used for encoding malicious payload'
         ))
 
+    #examples/socket_gethostname.py
     sets.append(utils.build_conf_dict(
-        'b64encode', 'B327', ['base64.b64encode'],
-        'b64decode can be used for encoding malicious payload'
+        'gethostname', 'B328', ['socket.gethostname'],
+        'gethostname can be used to get the hostname of the machine'
         ))
     return {'Call': sets}
