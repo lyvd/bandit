@@ -263,6 +263,7 @@ Usage::
       B327  b64encode
       B328  gethostname
       B202  socket_connect
+      B203  socket_send
 
 Baseline
 --------
