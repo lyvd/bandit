@@ -262,6 +262,7 @@ Usage::
       B326  b64decode
       B327  b64encode
       B328  gethostname
+      B202  socket_connect
 
 Baseline
 --------
