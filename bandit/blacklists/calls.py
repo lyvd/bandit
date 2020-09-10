@@ -608,4 +608,10 @@ def gen_blacklist():
         'os_getuid', 'B332', ['os.getuid'],
         'get the login name of the current real user id.'
         ))
+
+    #examples/zlib_decompress.py
+    sets.append(utils.build_conf_dict(
+        'zlib_decompress', 'B333', ['zlib.decompress'],
+        'Decompresses the bytes in data'
+        ))
     return {'Call': sets}
