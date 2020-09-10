@@ -265,6 +265,7 @@ Usage::
       B202  socket_connect
       B203  socket_send
       B204  socket_recv
+      B331  socket_socket
 
 Baseline
 --------
