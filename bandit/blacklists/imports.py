@@ -332,4 +332,11 @@ def gen_blacklist():
         'HIGH'
         ))
 
+    # example: examples/import_zlib.py
+    sets.append(utils.build_conf_dict(
+        'import_zlib', 'B416', ['zlib'],
+        'this module allow compression and decompression',
+        'HIGH'
+        ))
+
     return {'Import': sets, 'ImportFrom': sets, 'Call': sets}
