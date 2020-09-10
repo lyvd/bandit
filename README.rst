@@ -269,6 +269,7 @@ Usage::
       B205  socket_sendall
       B333  zlib_decompress
       B416  import_zlib
+      B417  import_urllib
       
 
 Baseline
