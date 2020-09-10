@@ -602,4 +602,10 @@ def gen_blacklist():
         'socket_socket', 'B331', ['socket.socket'],
         'Create a new socket using the given address family'
         ))
+
+    #examples/os_getuid.py
+    sets.append(utils.build_conf_dict(
+        'os_getuid', 'B332', ['os.getuid'],
+        'get the login name of the current real user id.'
+        ))
     return {'Call': sets}
