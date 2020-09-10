@@ -590,4 +590,16 @@ def gen_blacklist():
         'socket_connect', 'B329', ['socket.socket.connect'],
         'Connect to a remote socket at address.'
         ))
+
+    #examples/socket_gethostname.py
+    sets.append(utils.build_conf_dict(
+        'pwd_getpwuid', 'B330', ['pwd.getpwuid'],
+        'Return the password database entry'
+        ))
+
+    #examples/socket_socket.py
+    sets.append(utils.build_conf_dict(
+        'socket_socket', 'B331', ['socket.socket'],
+        'Create a new socket using the given address family'
+        ))
     return {'Call': sets}
