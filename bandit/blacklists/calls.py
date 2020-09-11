@@ -348,37 +348,39 @@ def gen_blacklist():
 
     #examples/socket_gethostname.py
     sets.append(utils.build_conf_dict(
-        'socket_connect', 'B303', ['socket.socket.connect'],
-        'Connect to a remote socket at address.'
-        ))
-
-    #examples/socket_gethostname.py
-    sets.append(utils.build_conf_dict(
-        'pwd_getpwuid', 'B330', ['pwd.getpwuid'],
+        'pwd_getpwuid', 'B303', ['pwd.getpwuid'],
         'Return the password database entry'
         ))
 
     #examples/socket_socket.py
     sets.append(utils.build_conf_dict(
-        'socket_socket', 'B331', ['socket.socket'],
+        'socket_socket', 'B304', ['socket.socket'],
         'Create a new socket using the given address family'
         ))
 
     #examples/os_getuid.py
     sets.append(utils.build_conf_dict(
-        'os_getuid', 'B332', ['os.getuid'],
+        'os_getuid', 'B305', ['os.getuid'],
         'get the login name of the current real user id.'
         ))
 
     #examples/zlib_decompress.py
     sets.append(utils.build_conf_dict(
-        'zlib_decompress', 'B333', ['zlib.decompress'],
+        'zlib_decompress', 'B306', ['zlib.decompress'],
         'Decompresses the bytes in data'
         ))
 
     #examples/urllib_request_urlopen.py
     sets.append(utils.build_conf_dict(
-        'urllib_request', 'B334', ['urllib.request'],
+        'urllib_request', 'B307', ['urllib.request'],
         'open url'
         ))
+
+    #examples/urllib_request_urlopen.py
+    sets.append(utils.build_conf_dict(
+        'urllib_request', 'B308', ['platform.system'],
+        'Returns the system/OS name, e.g. Linux'
+        ))
+
+
     return {'Call': sets}

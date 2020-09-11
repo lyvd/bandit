@@ -275,4 +275,11 @@ def gen_blacklist():
         'HIGH'
         ))
 
+    # example: examples/import_platform.py
+    sets.append(utils.build_conf_dict(
+        'import_platform', 'B406', ['platform'],
+        'Access to underlying platform’s identifying data',
+        'HIGH'
+        ))
+
     return {'Import': sets, 'ImportFrom': sets, 'Call': sets}
