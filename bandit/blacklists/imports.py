@@ -236,49 +236,49 @@ def gen_blacklist():
     # example: examples/import_base64
     sets.append(utils.build_conf_dict(
         'import_base64', 'B400', ['base64'],
-        'encode data using Base64 module',
+        'import_base64',
         'HIGH'
         ))
 
     # example: examples/import_socket.py
     sets.append(utils.build_conf_dict(
         'import_socket', 'B401', ['socket'],
-        'used for sending data to remote server',
+        'import_socket',
         'HIGH'
         ))
 
     # example: examples/import_zlib.py
     sets.append(utils.build_conf_dict(
         'import_zlib', 'B402', ['zlib'],
-        'this module allow compression and decompression',
+        'import_zlib',
         'HIGH'
         ))
 
     # example: examples/import_urllib.py
     sets.append(utils.build_conf_dict(
         'import_urllib', 'B403', ['urllib'],
-        'working with urls',
+        'import_urllib',
         'HIGH'
         ))
 
     # example: examples/import_urllib.py
     sets.append(utils.build_conf_dict(
         'import_pwd', 'B404', ['pwd'],
-        'access to the Unix user account and password database',
+        'import_pwd',
         'HIGH'
         ))
 
     # example: examples/import_http.py
     sets.append(utils.build_conf_dict(
         'import_http', 'B405', ['http'],
-        'handle URLs that use HTTP and HTTPS.',
+        'import_http',
         'HIGH'
         ))
 
     # example: examples/import_platform.py
     sets.append(utils.build_conf_dict(
         'import_platform', 'B406', ['platform'],
-        'Access to underlying platform’s identifying data',
+        'import_platform',
         'HIGH'
         ))
 

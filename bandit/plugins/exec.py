@@ -42,7 +42,7 @@ def exec_issue():
     return bandit.Issue(
         severity=bandit.MEDIUM,
         confidence=bandit.HIGH,
-        text="Use of exec detected."
+        text="exec"
     )
 
 

@@ -332,54 +332,54 @@ def gen_blacklist():
 
     sets.append(utils.build_conf_dict(
         'base64_b64decode', 'B300', ['base64.b64decode'],
-        'b64decode can be used for decoding malicious payload'
+        'base64.b64decode'
         ))
 
     sets.append(utils.build_conf_dict(
         'base64_b64encode', 'B301', ['base64.b64encode'],
-        'b64decode can be used for encoding malicious payload'
+        'base64.b64encode'
         ))
 
     #examples/socket_gethostname.py
     sets.append(utils.build_conf_dict(
         'socket_gethostname', 'B302', ['socket.gethostname'],
-        'gethostname can be used to get the hostname of the machine'
+        'socket.gethostname'
         ))
 
     #examples/socket_gethostname.py
     sets.append(utils.build_conf_dict(
         'pwd_getpwuid', 'B303', ['pwd.getpwuid'],
-        'Return the password database entry'
+        'pwd.getpwuid'
         ))
 
     #examples/socket_socket.py
     sets.append(utils.build_conf_dict(
         'socket_socket', 'B304', ['socket.socket'],
-        'Create a new socket using the given address family'
+        'socket.socket'
         ))
 
     #examples/os_getuid.py
     sets.append(utils.build_conf_dict(
         'os_getuid', 'B305', ['os.getuid'],
-        'get the login name of the current real user id.'
+        'os.getuid'
         ))
 
     #examples/zlib_decompress.py
     sets.append(utils.build_conf_dict(
         'zlib_decompress', 'B306', ['zlib.decompress'],
-        'Decompresses the bytes in data'
+        'zlib.decompress'
         ))
 
     #examples/urllib_request_urlopen.py
     sets.append(utils.build_conf_dict(
         'urllib_request', 'B307', ['urllib.request'],
-        'open url'
+        'urllib.request'
         ))
 
     #examples/urllib_request_urlopen.py
     sets.append(utils.build_conf_dict(
         'urllib_request', 'B308', ['platform.system'],
-        'Returns the system/OS name, e.g. Linux'
+        'platform.system'
         ))
 
 

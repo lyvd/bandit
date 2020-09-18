@@ -6,7 +6,7 @@
 
 r"""
 ======================================================
-B203: Test for use of socket.socket.send 
+B203: Test for use of socket.socket.send
 ======================================================
 
 Running Flask applications in debug mode results in the Werkzeug debugger
@@ -51,6 +51,6 @@ def socket_send(context):
             return bandit.Issue(
                     severity=bandit.HIGH,
                     confidence=bandit.MEDIUM,
-                    text="Send data to the socket",
+                    text="socket_send",
                     lineno=context.get_lineno_for_call_arg('debug'),
                 )

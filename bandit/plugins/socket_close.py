@@ -1,3 +1,4 @@
+
 # -*- coding:utf-8 -*-
 #
 # Copyright 2015 Hewlett-Packard Development Company, L.P.
@@ -43,14 +44,14 @@ import bandit
 from bandit.core import test_properties as test
 
 
-@test.test_id('B202')
+@test.test_id('B206')
 @test.checks('Call')
-def socket_connect(context):
+def socket_close(context):
     if context.is_module_imported_like('socket'):
-        if context.call_function_name_qual.endswith('.connect'):
+        if context.call_function_name_qual.endswith('.close'):
             return bandit.Issue(
                     severity=bandit.HIGH,
                     confidence=bandit.MEDIUM,
-                    text="socket_connect",
+                    text="socket_close",
                     lineno=context.get_lineno_for_call_arg('debug'),
                 )

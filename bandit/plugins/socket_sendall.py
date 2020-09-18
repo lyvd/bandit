@@ -7,7 +7,7 @@
 
 r"""
 ======================================================
-B202: Test for use of socket.socket.connect 
+B202: Test for use of socket.socket.connect
 ======================================================
 
 Running Flask applications in debug mode results in the Werkzeug debugger
@@ -52,6 +52,6 @@ def socket_sendall(context):
             return bandit.Issue(
                     severity=bandit.HIGH,
                     confidence=bandit.MEDIUM,
-                    text="Send data to the socket",
+                    text="socket_sendall",
                     lineno=context.get_lineno_for_call_arg('debug'),
                 )
