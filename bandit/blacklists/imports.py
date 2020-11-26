@@ -114,9 +114,23 @@ def gen_blacklist():
         'HIGH'
         ))
 
+    # example: examples/import_signal.py
+    sets.append(utils.build_conf_dict(
+        'import_signal', 'B414', ['signal'],
+        'import_signal',
+        'HIGH'
+        ))
+
+    # example: examples/import_multiprocessing.py
+    sets.append(utils.build_conf_dict(
+        'import_multiprocessing', 'B415', ['multiprocessing'],
+        'import_multiprocessing',
+        'HIGH'
+        ))
+
     # example: examples/new_import.py
     sets.append(utils.build_conf_dict(
-        'new_import', 'B414', [''],
+        'new_import', 'B499', [''],
         'new_import',
         'HIGH'
         ))
