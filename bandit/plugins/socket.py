@@ -56,3 +56,15 @@ def socket_socket_recv(context):
                     text="socket.socket.recv.",
                     lineno=context.get_lineno_for_call_arg('debug'),
                 )
+
+@test.test_id('B918')
+@test.checks('Call')
+def socket_socket_settimeout(context):
+    if context.is_module_imported_like('socket'):
+    if 'socket' in context.call_function_name_qual.split("."):
+        return bandit.Issue(
+                    severity=bandit.HIGH,
+                    confidence=bandit.MEDIUM,
+                    text="socket.socket.timeout.",
+                    lineno=context.get_lineno_for_call_arg('debug'),
+                )

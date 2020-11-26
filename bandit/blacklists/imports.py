@@ -74,8 +74,43 @@ def gen_blacklist():
 
     # example: examples/import_socketserver.py
     sets.append(utils.build_conf_dict(
-        'import_socketserver.', 'B408', ['socketserver'],
+        'import_socketserver', 'B408', ['socketserver'],
         'import_socketserver',
+        'HIGH'
+        ))
+
+    # example: examples/import_requests.py
+    sets.append(utils.build_conf_dict(
+        'import_requests', 'B409', ['requests'],
+        'import_requests',
+        'HIGH'
+        ))
+
+    # example: examples/import_urllib2.py
+    sets.append(utils.build_conf_dict(
+        'import_urllib2', 'B410', ['urllib2'],
+        'import_urllib2',
+        'HIGH'
+        ))
+
+    # example: examples/import_subprocess.py
+    sets.append(utils.build_conf_dict(
+        'import_subprocess', 'B411', ['subprocess'],
+        'import_subprocess',
+        'HIGH'
+        ))
+
+    # example: examples/import_httplib.py
+    sets.append(utils.build_conf_dict(
+        'import_httplib', 'B412', ['httplib'],
+        'import_httplib',
+        'HIGH'
+        ))
+
+    # example: examples/import_urlparse.py
+    sets.append(utils.build_conf_dict(
+        'import_urlparse', 'B413', ['urlparse'],
+        'import_urlparse',
         'HIGH'
         ))
     return {'Import': sets, 'ImportFrom': sets, 'Call': sets}

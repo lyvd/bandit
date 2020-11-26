@@ -37,7 +37,6 @@ def gen_blacklist():
         'pwd.getpwuid'
         ))
 
-    #examples/socket_socket.py
     sets.append(utils.build_conf_dict(
         'socket_socket', 'B304', ['socket.socket'],
         'socket.socket'
@@ -63,9 +62,37 @@ def gen_blacklist():
 
     #examples/urllib_request_urlopen.py
     sets.append(utils.build_conf_dict(
-        'urllib_request', 'B308', ['platform.system'],
+        'platform_system', 'B308', ['platform.system'],
         'platform.system'
         ))
 
+    #examples/os_chmod.py
+    sets.append(utils.build_conf_dict(
+        'os_chmod', 'B315', ['os.chmod'],
+        'os.chmod'
+        ))
 
+    #examples/os_system.py
+    sets.append(utils.build_conf_dict(
+        'os_system', 'B316', ['os.system'],
+        'os.system'
+        ))
+
+    #examples/os_environ.py
+    sets.append(utils.build_conf_dict(
+        'os_environ', 'B317', ['os.environ'],
+        'os.environ'
+        ))
+
+    #examples/urllib2_urlopen.py
+    sets.append(utils.build_conf_dict(
+        'urllib2_urlopen', 'B320', ['urllib2.urlopen'],
+        'urllib2_urlopen'
+        ))
+
+    #examples/urllib2_Request.py
+    sets.append(utils.build_conf_dict(
+        'urllib2_Request', 'B321', ['urllib2.Request'],
+        'urllib2_Request'
+        ))
     return {'Call': sets}

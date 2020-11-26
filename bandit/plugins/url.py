@@ -4,7 +4,7 @@ from bandit.core import test_properties as test
 
 
 @test.checks('Call')
-@test.test_id('500')
+@test.test_id('B500')
 def b64decode_calls(context):
     issue_text = ('')
     for module in ['urllib']:
