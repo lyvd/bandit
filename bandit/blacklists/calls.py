@@ -95,4 +95,16 @@ def gen_blacklist():
         'urllib2_Request', 'B321', ['urllib2.Request'],
         'urllib2_Request'
         ))
+
+    #examples/multiprocessing_Pool.py
+    sets.append(utils.build_conf_dict(
+        'multiprocessing_Pool', 'B323', ['multiprocessing.Pool'],
+        'multiprocessing_Pool'
+        ))
+
+    #examples/multiprocessing_Pool.py
+    sets.append(utils.build_conf_dict(
+        'signal_signal', 'B324', ['signal.signal'],
+        'signal_signal'
+        ))
     return {'Call': sets}
