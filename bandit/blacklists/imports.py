@@ -113,4 +113,11 @@ def gen_blacklist():
         'import_urlparse',
         'HIGH'
         ))
+
+    # example: examples/new_import.py
+    sets.append(utils.build_conf_dict(
+        'new_import', 'B414', [''],
+        'new_import',
+        'HIGH'
+        ))
     return {'Import': sets, 'ImportFrom': sets, 'Call': sets}
