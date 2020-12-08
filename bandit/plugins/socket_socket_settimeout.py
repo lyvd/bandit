@@ -9,16 +9,14 @@ import bandit
 from bandit.core import test_properties as test
 
 
-@test.test_id('B318')
-@test.checks('Call')
+@test.test_id("B316")
+@test.checks("Call")
 def socket_socket_settimeout(context):
-    if context.is_module_imported_like('socket'):
-        #import pdb; pdb.set_trace()
-        if context.call_function_name_qual.endswith('.settimeout'):
+    if context.is_module_imported_like("socket"):
+        if context.call_function_name_qual.endswith("settimeout"):
             return bandit.Issue(
-                    severity=bandit.HIGH,
-                    confidence=bandit.MEDIUM,
-                    text="socket.socket.settimeout",
-                    lineno=context.get_lineno_for_call_arg('debug'),
-                )
-
+                severity=bandit.HIGH,
+                confidence=bandit.MEDIUM,
+                text="socket.socket.settimeout",
+                lineno=context.get_lineno_for_call_arg("debug"),
+            )

@@ -128,10 +128,16 @@ def gen_blacklist():
         'HIGH'
         ))
 
-    # example: examples/new_import.py
+    # example: examples/import_getpass.py
     sets.append(utils.build_conf_dict(
-        'new_import', 'B499', [''],
-        'new_import',
+        'import_getpass', 'B416', ['getpass'],
+        'import_getpass',
         'HIGH'
         ))
+    # example: examples/new_import.py
+    #sets.append(utils.build_conf_dict(
+    #    'new_import', 'B499', [''],
+    #    'new_import',
+    #    'HIGH'
+    #    ))
     return {'Import': sets, 'ImportFrom': sets, 'Call': sets}

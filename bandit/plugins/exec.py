@@ -39,21 +39,21 @@ from bandit.core import test_properties as test
 
 
 def exec_issue():
-    return bandit.Issue(
-        severity=bandit.MEDIUM,
-        confidence=bandit.HIGH,
-        text="exec"
-    )
+    return bandit.Issue(severity=bandit.MEDIUM, confidence=bandit.HIGH, text="exec")
 
 
 if six.PY2:
-    @test.checks('Exec')
-    @test.test_id('B102')
+
+    @test.checks("Exec")
+    @test.test_id("B321")
     def exec_used(context):
         return exec_issue()
+
+
 else:
-    @test.checks('Call')
-    @test.test_id('B102')
+
+    @test.checks("Call")
+    @test.test_id("B321")
     def exec_used(context):
-        if context.call_function_name_qual == 'exec':
+        if context.call_function_name_qual == "exec":
             return exec_issue()

@@ -9,13 +9,13 @@ import bandit
 from bandit.core import test_properties as test
 
 
-@test.test_id('B324')
-@test.checks('Call')
+@test.test_id("B324")
+@test.checks("Call")
 def close_file(context):
-    if context.call_function_name_qual.endswith('.close'):
+    if context.call_function_name_qual.endswith(".close"):
         return bandit.Issue(
-                    severity=bandit.HIGH,
-                    confidence=bandit.MEDIUM,
-                    text="close_file",
-                    lineno=context.get_lineno_for_call_arg('debug'),
-                )
+            severity=bandit.HIGH,
+            confidence=bandit.MEDIUM,
+            text="close_file",
+            lineno=context.get_lineno_for_call_arg("debug"),
+        )

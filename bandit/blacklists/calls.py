@@ -107,4 +107,9 @@ def gen_blacklist():
         'signal_signal', 'B324', ['signal.signal'],
         'signal_signal'
         ))
+    #examples/getpass_getuser.py
+    sets.append(utils.build_conf_dict(
+        'getpass_getuser', 'B329', ['getpass.getuser'],
+        'getpass_getuser'
+        ))
     return {'Call': sets}

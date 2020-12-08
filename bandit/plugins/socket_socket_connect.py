@@ -9,15 +9,14 @@ import bandit
 from bandit.core import test_properties as test
 
 
-@test.test_id('B309')
-@test.checks('Call')
+@test.test_id("B315")
+@test.checks("Call")
 def socket_socket_connect(context):
-    if context.is_module_imported_like('socket'):
-        if context.call_function_name_qual.endswith('.connect'):
+    if context.is_module_imported_like("socket"):
+        if context.call_function_name_qual.endswith("connect"):
             return bandit.Issue(
-                    severity=bandit.HIGH,
-                    confidence=bandit.MEDIUM,
-                    text="socket.socket.connect",
-                    lineno=context.get_lineno_for_call_arg('debug'),
-                )
-
+                severity=bandit.HIGH,
+                confidence=bandit.MEDIUM,
+                text="socket.socket.connect",
+                lineno=context.get_lineno_for_call_arg("debug"),
+            )

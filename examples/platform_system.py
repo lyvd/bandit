@@ -1,3 +1,7 @@
 import platform
-if platform.system () == "Linux":
+if platform.system() == "Linux":
     pass
+
+from platform import *
+system()
+

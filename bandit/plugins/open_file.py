@@ -9,13 +9,13 @@ import bandit
 from bandit.core import test_properties as test
 
 
-@test.test_id('B322')
-@test.checks('Call')
+@test.test_id("B322")
+@test.checks("Call")
 def open_file(context):
-    if context.call_function_name_qual == 'open':
+    if context.call_function_name_qual == "open":
         return bandit.Issue(
-                    severity=bandit.HIGH,
-                    confidence=bandit.MEDIUM,
-                    text="open_file",
-                    lineno=context.get_lineno_for_call_arg('debug'),
-                )
+            severity=bandit.HIGH,
+            confidence=bandit.MEDIUM,
+            text="open_file",
+            lineno=context.get_lineno_for_call_arg("debug"),
+        )
