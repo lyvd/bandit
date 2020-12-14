@@ -1,9 +1,7 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-
-[dev-packages]
+name = "pypi"
 
 [packages]
 six = ">=1.10.0"
@@ -13,5 +11,7 @@ GitPython = ">=1.0.1"
 PyYAML = ">=5.3.1"
 pbr = "*"
 
+[dev-packages]
+
 [requires]
-python_version = "3.6"
+python_version = "2.7"
