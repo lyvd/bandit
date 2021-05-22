@@ -1,17 +1,16 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
-
-[packages]
-six = ">=1.10.0"
-stevedore = ">=1.20.0"
-colorama = ">=0.3.9"
-GitPython = ">=1.0.1"
-PyYAML = ">=5.3.1"
-pbr = "*"
 
 [dev-packages]
+
+[packages]
+gitpython = "*"
+pyyaml = "*"
+six = "*"
+stevedore = "*"
+colorama = "*"
 
 [requires]
 python_version = "2.7"
