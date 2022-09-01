@@ -4,7 +4,7 @@ from bandit.core import test_properties as test
 
 
 @test.checks('Str')
-@test.test_id('B500')
+@test.test_id('B824')
 def url_found(context):
     extracted_url = re.search("(?P<url>https?://[^\s]+)", context.string_val) 
     if extracted_url is not None:
